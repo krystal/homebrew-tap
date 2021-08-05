@@ -5,28 +5,28 @@
 class KatapultCli < Formula
   desc "The official CLI for Katapult."
   homepage ""
-  version "0.1.0-rc.4"
+  version "0.1.0-rc.5"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.4/katapult-cli_0.1.0-rc.4_Darwin_x86_64.tar.gz"
-      sha256 "71af32f62c6a99f004793a202ce8b83372fe901aad2a37d35af070308751c166"
+      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.5/katapult-cli_0.1.0-rc.5_Darwin_x86_64.tar.gz"
+      sha256 "0eb2c5ee55d1595515cf8133c3f72d84e3e7c7b152c0f3b146929b2cf7ab4f32"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.4/katapult-cli_0.1.0-rc.4_Darwin_arm64.tar.gz"
-      sha256 "2975aa072af958ab1e4cbec6001d1922cd6621149aad8079103cee1116b0dec4"
+      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.5/katapult-cli_0.1.0-rc.5_Darwin_arm64.tar.gz"
+      sha256 "4034c9cc54cc5526eb6ee575f574f12ac35382097e82add3602c9f924eed384c"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.4/katapult-cli_0.1.0-rc.4_Linux_x86_64.tar.gz"
-      sha256 "600c112959302db017ee4bfcc2899c3fb1be00f719e966425049ab050de46970"
+      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.5/katapult-cli_0.1.0-rc.5_Linux_x86_64.tar.gz"
+      sha256 "ee9c072ca3e85ac82c23325c186b2b9c26edbb7a607df677ba557217e140ff4d"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.4/katapult-cli_0.1.0-rc.4_Linux_arm64.tar.gz"
-      sha256 "8692e3ae1d8b78b5f1bda70dfe31c678d8a37e9000df3fd551ff94c91e8b02ef"
+      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.5/katapult-cli_0.1.0-rc.5_Linux_arm64.tar.gz"
+      sha256 "579b7f2574f71fb583803e86e3b13a8979e46d3aff08295954dde2c03185f300"
     end
   end
 
@@ -35,6 +35,6 @@ class KatapultCli < Formula
   end
 
   test do
-    katapult version
+    system "#{bin}/katapult version"
   end
 end
