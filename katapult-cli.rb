@@ -5,28 +5,28 @@
 class KatapultCli < Formula
   desc "The official CLI for Katapult."
   homepage ""
-  version "0.1.0-rc.7"
+  version "0.1.0-rc.8"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.7/katapult-cli_0.1.0-rc.7_Darwin_x86_64.tar.gz"
-      sha256 "cc3e2c0db8475e5f39a59ca065dd125008feea4b72611c18bda0f32e39d3bdb5"
+      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.8/katapult-cli_0.1.0-rc.8_Darwin_x86_64.tar.gz"
+      sha256 "a8fa43799465783e741b5b273e7845a651021338fceca1a99c7e784846e5a818"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.7/katapult-cli_0.1.0-rc.7_Darwin_arm64.tar.gz"
-      sha256 "7ddbc2380c09974007f4987872fc9cd4e6be0cb87ee2e50c5f14872bbe47ac79"
+      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.8/katapult-cli_0.1.0-rc.8_Darwin_arm64.tar.gz"
+      sha256 "693493e7520e60f065d359b1eef66c2e9e4aa41f2424177d732d34aa3261a24e"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.7/katapult-cli_0.1.0-rc.7_Linux_x86_64.tar.gz"
-      sha256 "c976aee32b10bbe4337c3c9b1a695c4e2136fc3e2b613165c6ad308991e57840"
+      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.8/katapult-cli_0.1.0-rc.8_Linux_x86_64.tar.gz"
+      sha256 "5aa2bb8d750a5c8a336ff9935a43ce1cd89be914ed00662c461683186e33ef06"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.7/katapult-cli_0.1.0-rc.7_Linux_arm64.tar.gz"
-      sha256 "62be0569e39b06a82544d70f8b75b3fcfdb51c4f3002d860a375db0560040125"
+      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.8/katapult-cli_0.1.0-rc.8_Linux_arm64.tar.gz"
+      sha256 "bd1e6e36254be24290ba26351865429163670e5936e629a8851b9c7c909a7ed7"
     end
   end
 
