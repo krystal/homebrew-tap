@@ -5,28 +5,28 @@
 class KatapultCli < Formula
   desc "The official CLI for Katapult."
   homepage ""
-  version "0.1.0-rc.9"
+  version "0.1.0-rc.10"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.9/katapult-cli_0.1.0-rc.9_Darwin_x86_64.tar.gz"
-      sha256 "82799dea4f0fc962bccdabe1cc62ecac03d7f5edd549e934e177a7390f8673bf"
+      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.10/katapult-cli_0.1.0-rc.10_Darwin_x86_64.tar.gz"
+      sha256 "f2acfd0d1f027edda2fa752d759f64cbca94c2c2a4881981681ccf29fa21a02c"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.9/katapult-cli_0.1.0-rc.9_Darwin_arm64.tar.gz"
-      sha256 "dee4036240ab9a7cd4f747d462c169409fa14e38e0f3b59f60e39f02470a319f"
+      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.10/katapult-cli_0.1.0-rc.10_Darwin_arm64.tar.gz"
+      sha256 "7f04367ed28dba6fc1579a843a3f0df3c959426a9cdc7d10177defd9f3d6b945"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.9/katapult-cli_0.1.0-rc.9_Linux_x86_64.tar.gz"
-      sha256 "2ec383ea9d68dfbfda127757a805ddb9f49bde6b969ef9910df76d43a824b322"
+      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.10/katapult-cli_0.1.0-rc.10_Linux_x86_64.tar.gz"
+      sha256 "3ed5c84e3b6eebd5a6fb18ddb48b4bad8d63c4616bc8a3eec55d73ebc6e29acf"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.9/katapult-cli_0.1.0-rc.9_Linux_arm64.tar.gz"
-      sha256 "5ca744b793c7ea22f1246fbd06e27a10a1583076b654f097aa72e7a1ee63bf31"
+      url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.10/katapult-cli_0.1.0-rc.10_Linux_arm64.tar.gz"
+      sha256 "03d83504b220e61440da10f4c1007d7ea38367ac4486a2966464b47d54af3810"
     end
   end
 
