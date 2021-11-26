@@ -6,32 +6,43 @@ class KatapultCli < Formula
   desc "The official CLI for Katapult."
   homepage ""
   version "0.1.0-rc.10"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.10/katapult-cli_0.1.0-rc.10_Darwin_x86_64.tar.gz"
-      sha256 "f2acfd0d1f027edda2fa752d759f64cbca94c2c2a4881981681ccf29fa21a02c"
+      sha256 "915dd782065296e61d47e89058a2760c58153e33ed18dafaae62170c3617ba3b"
+
+      def install
+        bin.install "katapult"
+      end
     end
     if Hardware::CPU.arm?
       url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.10/katapult-cli_0.1.0-rc.10_Darwin_arm64.tar.gz"
-      sha256 "7f04367ed28dba6fc1579a843a3f0df3c959426a9cdc7d10177defd9f3d6b945"
+      sha256 "e621bf47e938bca211e54be6fe7ab550001b996d0a2fa9151757a861e644c773"
+
+      def install
+        bin.install "katapult"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.10/katapult-cli_0.1.0-rc.10_Linux_x86_64.tar.gz"
-      sha256 "3ed5c84e3b6eebd5a6fb18ddb48b4bad8d63c4616bc8a3eec55d73ebc6e29acf"
+      sha256 "b85284c626d8e40e8fc2630305552cf7329771933d55ac9b01eacb97e549f4d0"
+
+      def install
+        bin.install "katapult"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/krystal/katapult-cli/releases/download/v0.1.0-rc.10/katapult-cli_0.1.0-rc.10_Linux_arm64.tar.gz"
-      sha256 "03d83504b220e61440da10f4c1007d7ea38367ac4486a2966464b47d54af3810"
-    end
-  end
+      sha256 "48e3309f7cb7119ff26ec7fc594dd8950f3674c0104ec11c918382c5f24c050c"
 
-  def install
-    bin.install "katapult"
+      def install
+        bin.install "katapult"
+      end
+    end
   end
 
   test do
